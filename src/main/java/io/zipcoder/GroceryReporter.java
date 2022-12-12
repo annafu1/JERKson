@@ -13,9 +13,9 @@ public class GroceryReporter {
         try {
             this.originalFileText = FileReader.readFile(jerksonFileName);
             try {
-                Matcher m = Pattern.compile("[Milk]").matcher(jerksonFileName);
+                Matcher m = Pattern.compile("[naMe:Milk;price:3.23;type:Food;expiration:1/25/2016##]").matcher(jerksonFileName);
                 while (m.find()) {
-                    System.out.println(m.group("Milk"));
+                    System.out.println(m.group());
                 }
             } catch (Exception e) {
                 throw new RuntimeException(e);

@@ -22,17 +22,7 @@ public class ItemParser {
         }
         return list;
     }
-
-    // Pattern pattern = Pattern.compile("milk")
-//        Matcher matcher = pattern.matcher(valueToParse);
-//        //String[] input = valueToParse.split(",\\s*");
-//        List<Item> list = new ArrayList<>();
-//        while (matcher.find()) {
-//            list.add(matcher.group());
-//        };
-//        String first = mylist.get(valueToParse);
-    //return first;
-
+    
     public Item parseSingleItem(String singleItem) throws ItemParseException {
         Pattern pattern = Pattern.compile("\\w+");
         Matcher m = pattern.matcher(singleItem);
